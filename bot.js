@@ -14,7 +14,7 @@ const { evaluate } = require("mathjs");
 const sharp = require("sharp");
 const fs = require("fs");
 
-const BOT_NAME = process.env.BOT_NAME || "WA Bot Indonesia";
+const BOT_NAME = process.env.BOT_NAME || "Bangcats Bot";
 const PREFIX = process.env.PREFIX || ".";
 const AUTO_GREETING = String(process.env.AUTO_GREETING || "true").toLowerCase() === "true";
 
@@ -169,21 +169,21 @@ function menu() {
   return `╭━━━〔 🤖 ${BOT_NAME} 〕━━━╮
 ┃
 ┃ 👋 halo / hai
-┃ 📋 ${PREFIX}menu
-┃ 🕐 ${PREFIX}jam <provinsi>
-┃ 🌤️ ${PREFIX}cuaca <provinsi>
-┃ 📍 ${PREFIX}provinsi
-┃ 🧮 ${PREFIX}hitung <rumus>
+┃ 📋 $menu
+┃ 🕐 $jam <provinsi>
+┃ 🌤️ $cuaca <provinsi>
+┃ 📍 $provinsi
+┃ 🧮 $hitung <rumus>
 ┃
 ┃ Contoh:
-┃ ${PREFIX}jam Jawa Barat
-┃ ${PREFIX}cuaca Jakarta
-┃ ${PREFIX}hitung 25*4+10
+┃ $jam Jawa Barat
+┃ $cuaca Jakarta
+┃ $hitung 25*4+10
 ╰━━━━━━━━━━━━━━━━━━━━╯`;
 }
 
 function greeting(name) {
-  return `Halo ${name || "Kak"} 👋\nSelamat datang di *${BOT_NAME}*.\n\nKetik *${PREFIX}menu* untuk melihat fitur yang tersedia.`;
+  return `Halo ${name || "Kak"} 👋\nSelamat datang di *${BOT_NAME}*.\n\nKetik menu untuk melihat fitur yang tersedia.`;
 }
 
 function safeCalculate(expr) {
